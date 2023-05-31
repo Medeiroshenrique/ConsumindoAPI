@@ -18,7 +18,7 @@ namespace ConsumindoAPIRest
                         string cepColsulted = Console.ReadLine().ToString();
 
                         var address = await cepClient.GetAddressAsync(cepColsulted);
-                        if(address.Logradouro==null){
+                        if(address.Localidade == null){
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("ERRO DURANTE CONSULTA: CEP Inválido!");
                             Console.ResetColor();
